@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clínica Dental Nova — Sitio Web Oficial
 
-## Getting Started
+Sitio web profesional, elegante y orientado a la conversión para **Clínica Dental Nova**, ubicada en Palermo, Ciudad Autónoma de Buenos Aires, Argentina.
 
-First, run the development server:
+Desarrollado con **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4** y optimizado para SEO local en CABA.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Características Principales
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Identidad Premium & Editorial**: Diseño minimalista con amplio espacio negativo, tipografía refinada (*Playfair Display* & *Plus Jakarta Sans*) y paleta de colores sobria (Azul petróleo `#0E2B38`, Arena cálido `#F5F1E9`, Carbón `#111315`).
+- **Conversión Directa a WhatsApp**: CTAs estratégicos para solicitud de turnos, consulta de coberturas y turnos con especialistas con mensajes preconfigurados.
+- **Mobile First**: Experiencia táctil optimizada, barra de acción flotante en pantallas móviles y navegación intuitiva para usuarios provenientes de Google Search e Instagram.
+- **8 Especialidades Odontológicas**:
+  - Odontología general
+  - Ortodoncia & Alineadores invisibles
+  - Implantes dentales & Carga inmediata
+  - Estética dental & Carillas
+  - Blanqueamiento dental
+  - Endodoncia mecanizada
+  - Prótesis & Rehabilitación oral
+  - Odontopediatría preventiva
+- **Modal Interactivo de Tratamientos**: Fichas clínicas con indicaciones, beneficios y tiempos de sesión.
+- **Cuerpo Médico**: Perfiles auténticos con matrícula nacional (MN/MP), trayectoria académica y consulta directa.
+- **Sección Coberturas & Prepagas**: OSDE, Swiss Medical, Galeno, Medicus, Sancor Salud, Accord Salud y particulares.
+- **Ubicación Local en Palermo**: Av. Santa Fe 3250 (entre Cnel. Díaz y Billinghurst), mapa integrado, accesos por Subte D y colectivos.
+- **Acordeón FAQ Accesible**: Respuestas claras a las 6 consultas más habituales.
+- **SEO Local & Schema Markup**: JSON-LD de tipo `Dentist` con geolocalización, horarios, teléfono y metadatos optimizados.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Inicio Rápido
 
-To learn more about Next.js, take a look at the following resources:
+### Requisitos previos
+- Node.js 18+ (recomendado 20 o superior)
+- npm / pnpm / yarn
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Instalación y ejecución
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Ingresar a la carpeta del proyecto:
+   ```bash
+   cd clinica-dental-nova
+   ```
 
-## Deploy on Vercel
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Abrir en el navegador [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 🛠️ Scripts Disponibles
+
+- `npm run dev`: Inicia el servidor de desarrollo con Turbopack.
+- `npm run build`: Genera la compilación de producción optimizada y estática.
+- `npm run start`: Inicia el servidor en modo producción.
+- `npm run lint`: Ejecuta las validaciones de ESLint.
+
+---
+
+## 📍 Datos de la Clínica
+
+- **Dirección**: Av. Santa Fe 3250, Palermo, CABA, Argentina
+- **Teléfono**: (011) 4821-3640
+- **WhatsApp**: +54 9 11 5555-8294
+- **Email**: [hola@clinicadentalnova.com](mailto:hola@clinicadentalnova.com)
+- **Horarios**: Lunes a viernes de 8:30 a 19:30 | Sábados de 9:00 a 13:00
+# nova
