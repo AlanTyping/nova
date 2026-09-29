@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 import { CLINIC_INFO } from "@/data/clinicData";
 
@@ -10,12 +10,11 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const viewport: Viewport = {
@@ -135,7 +134,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es" className={`${jakarta.variable} ${playfair.variable} scroll-smooth`}>
+    <html lang="es" className={`${jakarta.variable} ${outfit.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"

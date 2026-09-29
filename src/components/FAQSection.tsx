@@ -33,11 +33,11 @@ export default function FAQSection() {
             <Sparkles className="w-3.5 h-3.5 text-[#0EA5E9]" />
             Dudas Comunes
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[52px] font-medium leading-[1.1] text-[#0F172A] mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal leading-tight text-[#0F172A] mb-4">
             Preguntas frecuentes
           </h2>
-          <p className="text-lg sm:text-xl text-[#475569] font-light leading-relaxed max-w-xl mx-auto">
-            Resolvemos tus principales dudas sobre turnos, especialidades, coberturas y ubicación.
+          <p className="text-base sm:text-lg text-[#475569] font-normal leading-relaxed">
+            Resolvemos tus principales consultas sobre turnos, especialidades, coberturas y ubicación en Palermo.
           </p>
         </div>
 

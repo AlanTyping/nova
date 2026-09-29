@@ -75,17 +75,21 @@ export default function AboutSection() {
               Sobre la Clínica
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-[48px] font-medium leading-[1.1] text-[#0F172A] mb-8">
-              Más que una consulta, un lugar donde <br className="hidden lg:block" />
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal leading-tight text-[#0F172A] mb-6">
+              Más que una consulta, un lugar donde{" "}
               <span className="italic text-[#0284C7]">sentirte acompañado.</span>
             </h2>
 
             {/* Editorial quote highlighted block */}
-            <div className="relative pl-6 border-l-4 border-[#0284C7] mb-10">
-              <p className="text-lg sm:text-xl text-[#334155] font-medium leading-relaxed">
-                “Creemos en la odontología de precisión basada en la evidencia científica, con diagnósticos honestos y planes de tratamiento sin sorpresas.”
+            <div className="relative pl-6 border-l-3 border-[#0284C7] mb-8 bg-[#F0F9FF]/60 py-3 pr-4 rounded-r-2xl">
+              <p className="font-serif text-lg sm:text-[19px] text-[#1E293B] italic font-normal leading-relaxed">
+                “En Clínica Dental Nova creemos que una buena atención odontológica empieza mucho antes de sentarse en el sillón. Por eso trabajamos para ofrecer una experiencia clara, profesional y personalizada, desde la primera consulta hasta el seguimiento de cada tratamiento.”
               </p>
             </div>
+
+            <p className="text-[15px] text-[#475569] leading-relaxed mb-8">
+              Ubicados en pleno Palermo, diseñamos cada rincón de nuestra clínica para transmitir calma y armonía. Creemos en la odontología de precisión basada en la evidencia científica, con diagnósticos honestos y planes de tratamiento sin sorpresas.
+            </p>
 
             {/* Three key pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#E0F2FE]">

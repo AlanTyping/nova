@@ -15,13 +15,12 @@ export default function PremiumAuthoritySection() {
               Excelencia Odontológica
             </div>
             
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-[52px] font-medium leading-[1.1] text-[#0F172A] mb-6">
-              Expertise clínico y <br className="hidden sm:block" />
-              tecnología de <span className="italic text-[#0284C7]">vanguardia.</span>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal leading-tight text-[#0F172A] mb-6">
+              Expertise clínico y tecnología de <span className="italic text-[#0284C7]">vanguardia.</span>
             </h2>
             
-            <p className="text-lg sm:text-xl text-[#475569] font-light leading-relaxed mb-8 max-w-xl">
-              Combinamos profesionales de excelencia con la mejor tecnología médica para resolver casos complejos íntegramente en nuestra clínica.
+            <p className="text-[16px] text-[#475569] leading-relaxed mb-8">
+              En Clínica Dental Nova creemos que los mejores resultados se logran combinando profesionales altamente capacitados con la mejor tecnología médica disponible en el mercado. No tercerizamos diagnósticos; resolvemos casos complejos íntegramente en nuestra clínica en Palermo.
             </p>
 
             {/* Key Authority Pillars */}

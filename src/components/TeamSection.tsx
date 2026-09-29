@@ -12,12 +12,12 @@ export default function TeamSection() {
             <Sparkles className="w-3.5 h-3.5 text-[#0EA5E9]" />
             Cuerpo Médico
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[52px] font-medium leading-[1.1] text-[#0F172A] mb-5">
-            Profesionales que te acompañan <br className="hidden sm:block" />
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[46px] font-normal leading-tight text-[#0F172A] mb-5">
+            Profesionales que te acompañan{" "}
             <span className="italic text-[#0284C7]">en cada etapa.</span>
           </h2>
-          <p className="text-lg sm:text-xl text-[#475569] font-light leading-relaxed max-w-2xl">
-            Equipo multidisciplinario especializado con rigor científico, formación continua y un trato humano.
+          <p className="text-base sm:text-lg text-[#475569] font-normal leading-relaxed">
+            Un equipo multidisciplinario altamente calificado que combina rigor científico, formación continua en la UBA y un trato cálido y humano.
           </p>
         </div>
 

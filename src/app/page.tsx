@@ -27,35 +27,14 @@ export default function Home() {
       {/* Comprehensive Treatments Specialty Section */}
       <TreatmentsSection />
 
-      {/* Interactive Turno Express in 3 Steps */}
-      <InteractiveAppointmentBuilder />
-
-      {/* Philosophy & Differentials */}
-      <DifferentialsSection />
-
-      {/* About the Clinic & Experience Spaces */}
-      <AboutSection />
-
-      {/* Premium Authority & Technology Showcase */}
-      <PremiumAuthoritySection />
-
-      {/* Medical Team & Specialists */}
-      <TeamSection />
+      {/* Authentic Patient Testimonials */}
+      <TestimonialsSection />
 
       {/* Health Insurances & Prepagas */}
       <InsurancesSection />
 
-      {/* Authentic Patient Testimonials */}
-      <TestimonialsSection />
-
-      {/* Frequently Asked Questions with Category Filters */}
-      <FAQSection />
-
       {/* Local Palermo Location, Maps & Hours */}
       <LocationSection />
-
-      {/* Final Conversion Action */}
-      <FinalCTASection />
 
       {/* Institutional Footer */}
       <Footer />

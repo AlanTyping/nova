@@ -14,12 +14,12 @@ export default function DifferentialsSection() {
             <Sparkles className="w-3.5 h-3.5 text-[#0EA5E9]" />
             Nuestra Filosofía Clínica
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[52px] font-medium leading-[1.1] text-[#0F172A] mb-6">
-            Una experiencia diferente <br className="hidden sm:block" />
-            <span className="italic text-[#0284C7]">desde el primer día.</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[46px] font-normal leading-tight text-[#0F172A] mb-6">
+            Una experiencia diferente{" "}
+            <span className="italic text-[#0284C7]">desde la primera consulta.</span>
           </h2>
-          <p className="text-lg sm:text-xl text-[#475569] font-light leading-relaxed max-w-2xl">
-            Rediseñamos la atención tradicional para que tu visita sea clara, predecible y libre de estrés.
+          <p className="text-base sm:text-lg text-[#475569] font-normal leading-relaxed">
+            Rediseñamos la experiencia odontológica tradicional para que cada visita sea clara, predecible y libre de estrés en un entorno pensado para tu bienestar y tranquilidad.
           </p>
         </div>
 
