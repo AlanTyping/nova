@@ -176,10 +176,8 @@ Aguardo las opciones disponibles. Muchas gracias!`;
               </p>
             </div>
 
-            <a
+            <a onClick={(e) => e.preventDefault()}
               href={CLINIC_INFO.getWhatsAppUrl(generateWhatsAppMessage())}
-              target="_blank"
-              rel="noopener noreferrer"
               className="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#0284C7] to-[#0369A1] hover:from-[#0369A1] hover:to-[#0284C7] text-white text-[15px] font-semibold px-8 py-3.5 rounded-full shadow-[0_6px_20px_rgba(2,132,199,0.35)] hover:shadow-[0_8px_25px_rgba(2,132,199,0.45)] transition-all active:scale-95"
             >
               <MessageCircle className="w-5 h-5 text-[#BAE6FD]" />

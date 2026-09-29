@@ -3,11 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, ArrowRight, ChevronDown } from "lucide-react";
-import { CLINIC_INFO } from "@/data/clinicData";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end pt-20 pb-16 lg:pb-20 overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex flex-col justify-end pt-20 pb-28 sm:pb-16 lg:pb-20 overflow-hidden">
 
       {/* Parallax Background */}
       <div className="absolute inset-0 z-0 clip-path-hero">
@@ -61,10 +60,8 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
-          <a
-            href={CLINIC_INFO.getWhatsAppUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
+          <a onClick={(e) => e.preventDefault()}
+            href="#"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white text-[16px] font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02]"
           >
             <MessageCircle className="w-5 h-5" />

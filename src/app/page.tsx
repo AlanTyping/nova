@@ -1,18 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TreatmentsSection from "@/components/TreatmentsSection";
-import InteractiveAppointmentBuilder from "@/components/InteractiveAppointmentBuilder";
-import DifferentialsSection from "@/components/DifferentialsSection";
-import AboutSection from "@/components/AboutSection";
-import PremiumAuthoritySection from "@/components/PremiumAuthoritySection";
 import TeamSection from "@/components/TeamSection";
 import InsurancesSection from "@/components/InsurancesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import FAQSection from "@/components/FAQSection";
 import LocationSection from "@/components/LocationSection";
-import FinalCTASection from "@/components/FinalCTASection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
-import MobileQuickBar from "@/components/MobileQuickBar";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function Home() {
@@ -27,11 +21,17 @@ export default function Home() {
       {/* Comprehensive Treatments Specialty Section */}
       <TreatmentsSection />
 
-      {/* Authentic Patient Testimonials */}
-      <TestimonialsSection />
+      {/* Medical Specialists Team */}
+      <TeamSection />
 
       {/* Health Insurances & Prepagas */}
       <InsurancesSection />
+
+      {/* Authentic Patient Testimonials */}
+      <TestimonialsSection />
+
+      {/* Frequently Asked Questions */}
+      <FAQSection />
 
       {/* Local Palermo Location, Maps & Hours */}
       <LocationSection />
@@ -41,9 +41,6 @@ export default function Home() {
 
       {/* Desktop Floating WhatsApp Support */}
       <FloatingWhatsApp />
-
-      {/* Mobile Sticky Quick Action Bar */}
-      <MobileQuickBar />
     </main>
   );
 }

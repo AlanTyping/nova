@@ -27,10 +27,8 @@ export default function FloatingWhatsApp() {
       }`}
     >
       {/* Button */}
-      <a
-        href={CLINIC_INFO.getWhatsAppUrl()}
-        target="_blank"
-        rel="noopener noreferrer"
+      <a onClick={(e) => e.preventDefault()}
+        href="#"
         className="group flex items-center gap-2.5 bg-[#0284C7] hover:bg-[#0369A1] text-white px-5 py-3 rounded-xl shadow-[0_8px_25px_rgba(2,132,199,0.4)] hover:shadow-[0_10px_30px_rgba(2,132,199,0.5)] transition-all duration-300 active:scale-95"
         aria-label="Abrir chat de WhatsApp"
       >

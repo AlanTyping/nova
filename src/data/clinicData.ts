@@ -338,7 +338,7 @@ export const DOCTORS: Doctor[] = [
     specialty: "Ortodoncia y alineadores invisibles",
     bio: "Certificada en sistemas de ortodoncia digital y alineadores transparentes. Combina el análisis biométrico facial con la corrección funcional oclusal para lograr resultados que respetan la armonía natural del rostro.",
     matricula: "MN 45.890 · MP 6.042",
-    image: "https://images.unsplash.com/photo-1594824813591-1550974b260d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=800&q=80",
     education: [
       "Especialista en Ortodoncia y Ortopedia Maxilar",
       "Certificación Oficial en Ortodoncia Invisible 3D",

@@ -18,10 +18,24 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: "Inicio", href: "#inicio" },
     { name: "Tratamientos", href: "#tratamientos" },
+    { name: "Equipo", href: "#equipo" },
+    { name: "Coberturas", href: "#cobertura" },
     { name: "Reseñas", href: "#testimonios" },
+    { name: "FAQ", href: "#faq" },
     { name: "Ubicación", href: "#ubicacion" },
   ];
 
@@ -71,10 +85,8 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden sm:flex items-center gap-3">
-            <a
-              href={CLINIC_INFO.getWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <a onClick={(e) => e.preventDefault()}
+              href="#"
               className={`inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors ${
                 isScrolled ? "bg-[#0F172A] hover:bg-[#1E293B] text-white" : "bg-white text-[#0F172A] hover:bg-gray-100"
               }`}
@@ -86,10 +98,8 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <a
-              href={CLINIC_INFO.getWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <a onClick={(e) => e.preventDefault()}
+              href="#"
               className={`sm:hidden inline-flex items-center justify-center p-2.5 rounded-xl ${
                 isScrolled ? "bg-[#0F172A] text-white" : "bg-white text-[#0F172A]"
               }`}
@@ -151,9 +161,7 @@ export default function Header() {
             {/* Bottom contact info */}
             <div className="pt-6 border-t border-gray-100 space-y-4">
               <a
-                href={CLINIC_INFO.getWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 bg-[#0F172A] text-white text-sm font-semibold py-3.5 rounded-xl"
               >

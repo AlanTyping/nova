@@ -1,3 +1,4 @@
+"use client";
 import { DIFFERENTIALS, CLINIC_INFO } from "@/data/clinicData";
 import { Sparkles, MessageCircle, ShieldCheck, CheckCircle2 } from "lucide-react";
 
@@ -71,10 +72,8 @@ export default function DifferentialsSection() {
               En tu primera consulta realizamos un escaneo y diagnóstico completo para explicarte cada opción con claridad.
             </p>
           </div>
-          <a
-            href={CLINIC_INFO.getWhatsAppUrl("Hola, quisiera agendar una primera consulta de diagnóstico en Palermo.")}
-            target="_blank"
-            rel="noopener noreferrer"
+          <a onClick={(e) => e.preventDefault()}
+            href="#"
             className="shrink-0 inline-flex items-center gap-2.5 bg-gradient-to-r from-[#0EA5E9] to-[#0284C7] hover:from-[#0284C7] hover:to-[#0EA5E9] text-white text-[14.5px] font-semibold px-7 py-3.5 rounded-full transition-all active:scale-95 shadow-[0_4px_14px_rgba(14,165,233,0.4)]"
           >
             <MessageCircle className="w-4 h-4 text-[#E0F2FE]" />

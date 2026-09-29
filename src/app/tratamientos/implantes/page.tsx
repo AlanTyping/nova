@@ -1,3 +1,4 @@
+﻿"use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileQuickBar from "@/components/MobileQuickBar";
@@ -45,10 +46,8 @@ export default function ImplantesPage() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <a
-                href={CLINIC_INFO.getWhatsAppUrl("Hola, estuve viendo la web y me gustaría solicitar una evaluación para implantes dentales.")}
-                target="_blank"
-                rel="noopener noreferrer"
+              <a onClick={(e) => e.preventDefault()}
+                href="#"
                 className="inline-flex items-center justify-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white text-[14px] font-bold px-8 py-4 rounded-full transition-all shadow-[0_4px_14px_rgba(2,132,199,0.4)]"
               >
                 Solicitar evaluación sin cargo
@@ -167,7 +166,7 @@ export default function ImplantesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Star className="w-12 h-12 text-[#38BDF8] mx-auto mb-6" />
           <h2 className="font-serif text-3xl text-[#0F172A] mb-8 leading-relaxed">
-            "Tenía mucho miedo al procedimiento, pero el Dr. Ferrer me explicó todo detalladamente. Fue súper rápido, no sentí dolor y ahora puedo volver a comer con normalidad. Me cambió la vida."
+            &quot;Tenía mucho miedo al procedimiento, pero el Dr. Ferrer me explicó todo detalladamente. Fue súper rápido, no sentí dolor y ahora puedo volver a comer con normalidad. Me cambió la vida.&quot;
           </h2>
           <p className="font-bold text-[#0284C7] uppercase tracking-widest text-[13px]">
             — Carlos M. (Paciente de Rehabilitación sobre Implantes)
@@ -184,10 +183,8 @@ export default function ImplantesPage() {
           <p className="text-[#E0F2FE] mb-10 text-lg">
             Agendá una consulta de evaluación. Analizaremos tu caso particular y te brindaremos un presupuesto transparente y opciones de financiación.
           </p>
-          <a
-            href={CLINIC_INFO.getWhatsAppUrl("Hola, quiero agendar una evaluación para implantes dentales.")}
-            target="_blank"
-            rel="noopener noreferrer"
+          <a onClick={(e) => e.preventDefault()}
+            href="#"
             className="inline-flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-[#0284C7] text-[#0A2638] hover:text-white text-[15px] font-bold px-8 py-4 rounded-full transition-all shadow-[0_4px_14px_rgba(56,189,248,0.3)]"
           >
             <CalendarHeart className="w-5 h-5" />
@@ -202,3 +199,5 @@ export default function ImplantesPage() {
     </main>
   );
 }
+
+

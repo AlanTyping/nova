@@ -1,7 +1,7 @@
 "use client";
 
 import { Treatment, CLINIC_INFO } from "@/data/clinicData";
-import { X, CheckCircle2, Clock, Calendar, MessageCircle, ArrowUpRight, Sparkles, Shield } from "lucide-react";
+import { X, MessageCircle, ArrowUpRight, Shield } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -29,117 +29,117 @@ export default function TreatmentModal({ treatment, onClose }: TreatmentModalPro
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 lg:p-8"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
     >
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-[#0A2638]/70 backdrop-blur-xs transition-opacity animate-fade-in"
+        className="fixed inset-0 bg-[#0A2638]/50 backdrop-blur-md transition-opacity animate-fade-in"
         onClick={onClose}
       />
 
-      {/* Modal Card */}
-      <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden z-10 border border-[#BAE6FD] max-h-[90vh] flex flex-col animate-fade-in">
-        {/* Header with image & Celeste gradient overlay */}
-        <div className="relative h-48 sm:h-56 w-full bg-[#0A2638] shrink-0">
+      {/* Modal Card - Editorial Split Layout */}
+      <div className="relative w-full max-w-[950px] bg-white rounded-3xl sm:rounded-[2rem] shadow-2xl overflow-hidden z-10 flex flex-col md:flex-row max-h-[92vh] sm:max-h-[85vh] animate-fade-in">
+        
+        {/* Close button - absolute floating over everything */}
+        <button
+          onClick={onClose}
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 backdrop-blur-md text-[#0A2638] hover:bg-white hover:scale-105 flex items-center justify-center transition-all focus:outline-none shadow-md cursor-pointer"
+          aria-label="Cerrar detalles del tratamiento"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Left: Image side */}
+        <div className="relative h-44 sm:h-56 md:h-auto md:w-5/12 bg-[#0A2638] shrink-0">
           <Image
             src={treatment.image}
             alt={treatment.name}
             fill
-            className="object-cover opacity-80"
-            sizes="(max-width: 768px) 100vw, 700px"
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 400px"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A2638] via-[#0A2638]/60 to-transparent" />
+          {/* Subtle gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A2638]/70 via-[#0A2638]/20 to-transparent" />
+        </div>
 
-          {/* Close button */}
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 text-white hover:bg-white hover:text-[#0A2638] flex items-center justify-center transition-colors focus:outline-none backdrop-blur-xs border border-white/30"
-            aria-label="Cerrar detalles del tratamiento"
-          >
-            <X className="w-5 h-5" />
-          </button>
-
-          {/* Title on image */}
-          <div className="absolute bottom-4 left-6 right-6">
-            <span className="text-[11px] uppercase tracking-wider font-bold text-[#BAE6FD] bg-[#0284C7]/80 px-3 py-1 rounded-full mb-2 inline-block backdrop-blur-xs border border-[#7DD3FC]/40">
-              {treatment.categoryLabel}
-            </span>
-            <h3 id="modal-title" className="font-serif text-2xl sm:text-3xl text-white font-medium">
+        {/* Right: Content side */}
+        <div className="md:w-7/12 flex flex-col h-full max-h-[calc(92vh-11rem)] sm:max-h-[calc(92vh-14rem)] md:max-h-[85vh] overflow-y-auto bg-white">
+          <div className="p-5 sm:p-8 md:p-12 flex-1">
+            {/* Title */}
+            <h3 id="modal-title" className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#0A2638] font-normal leading-tight mb-3 sm:mb-4">
               {treatment.name}
             </h3>
-          </div>
-        </div>
-
-        {/* Modal Scrollable Body */}
-        <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
-          {/* Tagline & Description */}
-          <div>
-            <p className="text-sm sm:text-[15px] font-semibold text-[#0284C7] italic mb-3">
-              "{treatment.tagline}"
+            
+            {/* Tagline */}
+            <p className="text-[15px] sm:text-[18px] font-serif text-[#0284C7] italic mb-4 sm:mb-6 leading-relaxed">
+              &quot;{treatment.tagline}&quot;
             </p>
-            <p className="text-[14.5px] text-[#475569] leading-relaxed">
+            
+            {/* Description */}
+            <p className="text-[13.5px] sm:text-[14.5px] text-[#475569] leading-relaxed mb-6 sm:mb-8">
               {treatment.fullDescription}
             </p>
-          </div>
 
-          {/* Key clinical benefits */}
-          <div className="bg-[#F0F9FF] p-5 rounded-2xl border border-[#BAE6FD]">
-            <h4 className="text-[13px] font-bold uppercase tracking-wider text-[#0284C7] mb-3.5 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#0EA5E9]" />
-              Beneficios y Abordaje Clínico
-            </h4>
-            <ul className="space-y-2.5">
-              {treatment.benefits.map((benefit, i) => (
-                <li key={i} className="flex items-start gap-2.5 text-[13.5px] text-[#1E293B]">
-                  <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0 mt-0.5" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Recommendation and duration */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[13px]">
-            <div className="p-4 bg-[#F8FAFC] rounded-2xl border border-[#E2E8F0]">
-              <div className="flex items-center gap-2 text-[#0A2638] font-bold mb-1">
-                <Calendar className="w-4 h-4 text-[#0284C7]" />
-                <span>Indicado para:</span>
+            {/* Details (Indicado para & Sesiones) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 py-5 sm:py-8 border-y border-[#F1F5F9] mb-6 sm:mb-8">
+              <div>
+                <span className="block text-[10px] uppercase tracking-[0.15em] text-[#94A3B8] font-bold mb-1.5 sm:mb-2.5">
+                  Indicado para
+                </span>
+                <p className="text-[13px] text-[#334155] leading-relaxed pr-2 sm:pr-4">
+                  {treatment.recommendedFor}
+                </p>
               </div>
-              <p className="text-[#64748B]">{treatment.recommendedFor}</p>
-            </div>
-            <div className="p-4 bg-[#F8FAFC] rounded-2xl border border-[#E2E8F0]">
-              <div className="flex items-center gap-2 text-[#0A2638] font-bold mb-1">
-                <Clock className="w-4 h-4 text-[#0284C7]" />
-                <span>Estimación de sesiones:</span>
+              <div>
+                <span className="block text-[10px] uppercase tracking-[0.15em] text-[#94A3B8] font-bold mb-1.5 sm:mb-2.5">
+                  Duración estimada
+                </span>
+                <p className="text-[13px] text-[#334155] leading-relaxed">
+                  {treatment.sessions}
+                </p>
               </div>
-              <p className="text-[#64748B]">{treatment.sessions}</p>
+            </div>
+
+            {/* Benefits */}
+            <div>
+              <span className="block text-[10px] uppercase tracking-[0.15em] text-[#94A3B8] font-bold mb-3.5 sm:mb-5">
+                Abordaje Clínico y Beneficios
+              </span>
+              <ul className="space-y-3 sm:space-y-4">
+                {treatment.benefits.map((benefit, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#0284C7] shrink-0 mt-2" />
+                    <span className="text-[13.5px] sm:text-[14px] text-[#334155] leading-relaxed">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-        </div>
 
-        {/* Modal Footer / Action */}
-        <div className="p-5 sm:p-6 bg-[#F0F9FF] border-t border-[#BAE6FD] flex flex-col sm:flex-row items-center justify-between gap-4 shrink-0">
-          <div className="text-[12.5px] text-[#64748B] text-center sm:text-left flex items-center gap-1.5">
-            <Shield className="w-4 h-4 text-[#0284C7]" />
-            <span>Consultorio Palermo · Av. Santa Fe 3250</span>
+          {/* Footer / CTA */}
+          <div className="p-4 sm:p-6 md:px-12 md:py-8 bg-white border-t border-[#F1F5F9] shrink-0">
+            <a onClick={(e) => e.preventDefault()}
+              href="#"
+              className="group w-full inline-flex items-center justify-between bg-[#0A2638] hover:bg-[#0284C7] text-white px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl transition-all duration-300 shadow-md hover:shadow-lg active:scale-98"
+            >
+              <div className="flex items-center gap-2.5 sm:gap-3">
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#BAE6FD]" />
+                <span className="text-[13.5px] sm:text-[14.5px] font-medium tracking-wide">Agendar consulta médica</span>
+              </div>
+              <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#BAE6FD] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </a>
+            <div className="mt-3 sm:mt-5 flex items-center justify-center gap-1.5 text-[11px] sm:text-[11.5px] text-[#94A3B8]">
+              <Shield className="w-3.5 h-3.5" />
+              <span>Tratamiento en Palermo · Av. Santa Fe 3250</span>
+            </div>
           </div>
-          <a
-            href={CLINIC_INFO.getWhatsAppUrl(
-              `Hola Clínica Dental Nova, me interesa consultar y solicitar un turno para el tratamiento de ${treatment.name}.`
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#0284C7] to-[#0369A1] hover:from-[#0369A1] hover:to-[#0284C7] text-white text-[14px] font-semibold px-6 py-3 rounded-full shadow-[0_4px_14px_rgba(2,132,199,0.3)] transition-all active:scale-95"
-          >
-            <MessageCircle className="w-4 h-4 text-[#BAE6FD]" />
-            <span>Consultar por este tratamiento</span>
-            <ArrowUpRight className="w-4 h-4 opacity-80" />
-          </a>
         </div>
       </div>
     </div>
   );
 }
+

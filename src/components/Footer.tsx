@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { MapPin, Phone, Mail, Clock, MessageCircle, ArrowUp, Sparkles } from "lucide-react";
 
@@ -6,11 +8,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0A2638] text-[#E0F2FE] pt-16 pb-24 md:pb-12 border-t border-[#0284C7]/30">
+    <footer className="bg-[#0A2638] text-[#E0F2FE] pt-16 border-t border-[#0284C7]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-[#0284C7]/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12">
           {/* Col 1: Brand & Identity */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5 space-y-4">
             <Link
               href="#inicio"
               className="group flex items-center gap-3 mb-4 focus:outline-none"
@@ -57,10 +59,8 @@ export default function Footer() {
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
               </a>
-              <a
-                href={CLINIC_INFO.getWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
+              <a onClick={(e) => e.preventDefault()}
+                href="#"
                 className="w-10 h-10 rounded-full bg-[#0284C7] text-white hover:bg-[#0369A1] flex items-center justify-center transition-colors shadow-md"
                 aria-label="WhatsApp directo"
               >
@@ -69,57 +69,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Navigation */}
-          <div className="lg:col-span-2">
-            <h4 className="text-[12px] uppercase tracking-[0.18em] font-bold text-[#38BDF8] mb-4">
-              Navegación
-            </h4>
-            <ul className="space-y-2.5 text-[14px]">
-              <li>
-                <Link href="#inicio" className="hover:text-[#38BDF8] transition-colors">
-                  Inicio
-                </Link>
-              </li>
-              <li>
-                <Link href="#tratamientos" className="hover:text-[#38BDF8] transition-colors">
-                  Tratamientos
-                </Link>
-              </li>
-              <li>
-                <Link href="#turno-express" className="hover:text-[#38BDF8] transition-colors">
-                  Turno Express
-                </Link>
-              </li>
-              <li>
-                <Link href="#nosotros" className="hover:text-[#38BDF8] transition-colors">
-                  Nosotros
-                </Link>
-              </li>
-              <li>
-                <Link href="#equipo" className="hover:text-[#38BDF8] transition-colors">
-                  Equipo Médico
-                </Link>
-              </li>
-              <li>
-                <Link href="#cobertura" className="hover:text-[#38BDF8] transition-colors">
-                  Coberturas
-                </Link>
-              </li>
-              <li>
-                <Link href="#faq" className="hover:text-[#38BDF8] transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="#contacto" className="hover:text-[#38BDF8] transition-colors">
-                  Contacto
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 3: Contact details */}
-          <div className="lg:col-span-3">
+          {/* Col 2: Contact details */}
+          <div className="lg:col-span-4 space-y-3">
             <h4 className="text-[12px] uppercase tracking-[0.18em] font-bold text-[#38BDF8] mb-4">
               Contacto
             </h4>
@@ -136,10 +87,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#38BDF8] shrink-0" />
-                <a
-                  href={CLINIC_INFO.getWhatsAppUrl()}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a onClick={(e) => e.preventDefault()}
+                  href="#"
                   className="hover:text-white transition-colors"
                 >
                   {CLINIC_INFO.whatsapp}
@@ -154,8 +103,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Horarios */}
-          <div className="lg:col-span-3">
+          {/* Col 3: Horarios */}
+          <div className="lg:col-span-3 space-y-3">
             <h4 className="text-[12px] uppercase tracking-[0.18em] font-bold text-[#38BDF8] mb-4">
               Horarios de atención
             </h4>
@@ -181,14 +130,51 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Legal & Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-[#7DD3FC]">
-          <p>© {currentYear} {CLINIC_INFO.name}. Todos los derechos reservados. Palermo, CABA.</p>
-          <div className="flex items-center gap-6">
-            <span>Dirección Técnica: Dra. Valentina Ruiz (MN 38.412)</span>
+      </div>
+
+      {/* Sub-footer / Copyright (Fondo Negro) */}
+      <div className="bg-black text-zinc-400 py-6 border-t border-zinc-900 mt-12 md:mt-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-center md:text-left">
+          <p className="text-zinc-500 text-[11px] sm:text-xs">
+            © {currentYear} {CLINIC_INFO.name}. Web de un consultorio ficticio.
+          </p>
+          
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+            <span className="text-[11px] text-zinc-500 hidden lg:inline-block">
+              Dirección Técnica: Dra. Valentina Ruiz
+            </span>
+            
+            <span className="hidden lg:inline-block w-1 h-1 rounded-full bg-zinc-700" />
+            
+            <a 
+              href="https://www.huellaonline.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 opacity-85 hover:opacity-100 transition-opacity whitespace-nowrap"
+            >
+              <span className="text-[10.5px] sm:text-[11px] text-zinc-400">
+                desarrollado por
+              </span>
+              <div className="inline-flex items-center gap-1 font-bold text-[10.5px] sm:text-[11px] tracking-wider">
+                <Image 
+                  src="/logos/huellaonline.svg" 
+                  alt="Huella Online" 
+                  width={18} 
+                  height={18} 
+                  className="h-3.5 w-auto inline-block"
+                />
+                <span>
+                  <span className="text-white font-bold">HUELLA</span>
+                  <span style={{ color: "#ffa500" }} className="font-bold">ONLINE</span>
+                </span>
+              </div>
+            </a>
+
+            <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-zinc-700" />
+
             <Link
               href="#inicio"
-              className="inline-flex items-center gap-1 hover:text-white transition-colors"
+              className="inline-flex items-center gap-1 hover:text-zinc-300 transition-colors text-zinc-500"
               aria-label="Volver arriba"
             >
               <span>Subir</span>
