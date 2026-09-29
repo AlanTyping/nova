@@ -1,8 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, ArrowRight, ChevronDown } from "lucide-react";
+import PreventDefaultLink from "./PreventDefaultLink";
+
+import AnimatedSection from "./AnimatedSection";
 
 export default function Hero() {
   return (
@@ -49,33 +50,39 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-start text-left mb-4">
 
         {/* Main Headline */}
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-[76px] font-normal leading-[1.1] text-[#0F172A] mb-6 max-w-2xl">
-          Odontología <span className="italic text-[#0284C7]">integral</span>
-        </h1>
+        <AnimatedSection delay={0}>
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-[76px] font-normal leading-[1.1] text-[#0F172A] mb-6 max-w-2xl">
+            Odontología <span className="italic text-[#0284C7]">integral</span>
+          </h1>
+        </AnimatedSection>
 
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl text-gray-700 font-medium leading-relaxed max-w-xl mb-10">
-          Cuidamos tu sonrisa con tecnología de vanguardia. Un espacio profesional diseñado para tu bienestar.
-        </p>
+        <AnimatedSection delay={150}>
+          <p className="text-lg sm:text-xl text-gray-700 font-medium leading-relaxed max-w-xl mb-10">
+            Cuidamos tu sonrisa con tecnología de vanguardia. Un espacio profesional diseñado para tu bienestar.
+          </p>
+        </AnimatedSection>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
-          <a onClick={(e) => e.preventDefault()}
-            href="#"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white text-[16px] font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02]"
-          >
-            <MessageCircle className="w-5 h-5" />
-            <span>Agendar Turno</span>
-          </a>
+        <AnimatedSection delay={300}>
+          <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
+            <PreventDefaultLink
+              href="#"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white text-[16px] font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02]"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span>Agendar Turno</span>
+            </PreventDefaultLink>
 
-          <Link
-            href="#tratamientos"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[#475569] hover:text-[#0F172A] text-[15px] font-medium transition-all duration-300 group"
-          >
-            <span className="border-b border-[#94A3B8] group-hover:border-[#0F172A] transition-colors pb-0.5">Ver Tratamientos</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+            <Link
+              href="#tratamientos"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[#475569] hover:text-[#0F172A] text-[15px] font-medium transition-all duration-300 group"
+            >
+              <span className="border-b border-[#94A3B8] group-hover:border-[#0F172A] transition-colors pb-0.5">Ver Tratamientos</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </AnimatedSection>
       </div>
 
       {/* Minimalist Static Arrow */}

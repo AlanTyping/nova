@@ -1,6 +1,6 @@
-"use client";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { MapPin, Phone, Clock, MessageCircle, Navigation, Train, Bus, Car } from "lucide-react";
+import PreventDefaultLink from "./PreventDefaultLink";
 
 export default function LocationSection() {
   return (
@@ -11,7 +11,6 @@ export default function LocationSection() {
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
               
-
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-[46px] font-normal leading-tight text-[#0F172A] mb-6">
                 Estamos en <span className="italic text-[#0284C7]">Palermo.</span>
               </h2>
@@ -77,7 +76,7 @@ export default function LocationSection() {
                     </div>
                   </a>
 
-                  <a onClick={(e) => e.preventDefault()}
+                  <PreventDefaultLink
                     href="#"
                     className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-[#BAE6FD]/80 hover:border-[#0284C7] transition-all shadow-xs"
                   >
@@ -92,7 +91,7 @@ export default function LocationSection() {
                         {CLINIC_INFO.whatsapp}
                       </p>
                     </div>
-                  </a>
+                  </PreventDefaultLink>
                 </div>
               </div>
 

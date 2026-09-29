@@ -1,6 +1,6 @@
-"use client";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { MessageCircle, ShieldCheck, MapPin, Phone, Sparkles } from "lucide-react";
+import PreventDefaultLink from "./PreventDefaultLink";
 
 export default function FinalCTASection() {
   return (
@@ -35,13 +35,13 @@ export default function FinalCTASection() {
 
         {/* Primary CTA Button with Celeste & White Glow */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto mb-12">
-          <a onClick={(e) => e.preventDefault()}
+          <PreventDefaultLink
             href="#"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#38BDF8] via-white to-[#38BDF8] hover:from-white hover:to-white text-[#0A2638] text-[16px] font-bold px-10 py-4 rounded-full transition-all duration-300 shadow-[0_10px_35px_rgba(56,189,248,0.4)] hover:shadow-[0_12px_40px_rgba(255,255,255,0.5)] active:scale-[0.98] group"
           >
             <MessageCircle className="w-5 h-5 text-[#0284C7] group-hover:scale-110 transition-transform" />
             <span>Solicitar turno por WhatsApp</span>
-          </a>
+          </PreventDefaultLink>
         </div>
 
         {/* Local confirmation points */}

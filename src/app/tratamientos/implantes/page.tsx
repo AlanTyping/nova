@@ -1,17 +1,11 @@
-﻿"use client";
+"use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MobileQuickBar from "@/components/MobileQuickBar";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Image from "next/image";
 import Link from "next/link";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { CheckCircle2, ChevronRight, Activity, CalendarHeart, ShieldCheck, Microscope, Star, ScanLine, Syringe } from "lucide-react";
-
-export const metadata = {
-  title: "Implantes Dentales en Palermo | Alta Complejidad",
-  description: "Recuperá tu sonrisa con implantes dentales de titanio y tecnología de escaneo 3D. Cirugía mínimamente invasiva guiada por computadora en Palermo, CABA.",
-};
 
 export default function ImplantesPage() {
   return (
@@ -195,7 +189,6 @@ export default function ImplantesPage() {
 
       <Footer />
       <FloatingWhatsApp />
-      <MobileQuickBar />
     </main>
   );
 }

@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
             return (
               <div
                 key={item.id}
-                className="bg-white p-5 sm:p-6 rounded-2xl border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow flex flex-col relative"
+                className="bg-white p-5 sm:p-6 rounded-2xl border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow flex flex-col relative w-full"
               >
                 {/* Header: Avatar, Name, Google Icon */}
                 <div className="flex items-start justify-between mb-3">

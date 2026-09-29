@@ -1,8 +1,8 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { MapPin, Phone, Mail, Clock, MessageCircle, ArrowUp, Sparkles } from "lucide-react";
+import PreventDefaultLink from "./PreventDefaultLink";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -59,13 +59,13 @@ export default function Footer() {
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
               </a>
-              <a onClick={(e) => e.preventDefault()}
+              <PreventDefaultLink
                 href="#"
                 className="w-10 h-10 rounded-full bg-[#0284C7] text-white hover:bg-[#0369A1] flex items-center justify-center transition-colors shadow-md"
                 aria-label="WhatsApp directo"
               >
                 <MessageCircle className="w-4 h-4 text-[#BAE6FD]" />
-              </a>
+              </PreventDefaultLink>
             </div>
           </div>
 
@@ -87,12 +87,12 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#38BDF8] shrink-0" />
-                <a onClick={(e) => e.preventDefault()}
+                <PreventDefaultLink
                   href="#"
                   className="hover:text-white transition-colors"
                 >
                   {CLINIC_INFO.whatsapp}
-                </a>
+                </PreventDefaultLink>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#38BDF8] shrink-0" />
